@@ -1,0 +1,12 @@
+version: '1'
+
+services:
+  app:
+    image: "nextensen/nxos-docker-telemetry"
+    ports:
+      - "3000:3000"
+      - "8086:8086"
+      - "57000:57000"
+    volumes:
+      - /volume1/docker/influxdb:/var/lib/influxdb
+      - /volume1/docker/grafana:/var/lib/grafana
